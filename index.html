@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div id="hearts-container"></div>
+
+    <!-- Opening Screen -->
+    <div class="centered" id="opening">
+        <h1 class="intro-text">Hey Loyce… I made something for you</h1>
+        <p>The day God chose the world to receive you  <br> Psalm 139:14<br> some things are better built than bought..!!</p>
+
+        <section class="centered">
+            <img src="Valeroses.jpeg" alt="HAPPY VALENTINE'S DAY" class="romantic-photo">
+        </section>
+
+        <button onclick="startExperience()">Open Your little Surprise</button>
+    </div>
+
+    <!-- Main Surprise Content -->
+    <div id="main-content" class="hidden">
+
+        <!-- Birthday Countdown -->
+        <section class="centered">
+            <h2>Remaining Days to Your B-day</h2>
+            <div id="countdown">
+                <span id="days">0</span> Days
+                <span id="hours">0</span> Hours
+                <span id="minutes">0</span> Minutes
+                <span id="seconds">0</span> Seconds
+            </div>
+            <p>Fearfully and wonderfully made, from this day forward❤️</p>
+        </section>
+
+        <!-- Optional Image -->
+        <section class="centered">
+            <img src="secrose.avif" alt="HAPPY VALENTINE'S DAY" class="romantic-photo">
+        </section>
+
+        <section class="reason-to-smile">
+    <div id="smile-container">
+        <img id="smile-pic" src="" alt="Reason to Smile" class="smile-photo">
+        <p id="smile-message" class="smile-text"></p>
+    </div>
+    <button id="smile-btn">Press to shuffle 6 facts😊</button>
+</section>
+
+
+        <!-- Symmetrical Blooming Roses -->
+<div id="rose-background">
+    <div class="rose rose-left"></div>
+    <div class="rose rose-right"></div>
+</div>
+
+
+<!-- Envelope Section -->
+<section class="centered">
+    <div id="envelope-container">
+        <div id="envelope-closed">
+            <div class="seal">💖</div>
+            <button id="open-envelope-btn">Open Msg</button>
+        </div>
+
+        <div id="envelope-open" class="hidden">
+            <p id="typing-message" class="typing"></p>
+            <button id="close-envelope-btn" class="hidden">Close</button>
+        </div>
+    </div>
+</section>
+
+<div class="flower-field">
+    <div class="flower f1"></div>
+    <div class="flower f2"></div>
+    <div class="flower f3"></div>
+    <div class="flower f4"></div>
+    <div class="flower f5"></div>
+</div>
+
+
+
+
+        <!-- Signature -->
+      <div class="signature">
+    <img src="myzer.png" alt="Elisha" class="profile-pic">
+    <p>Made by MyZer</p>
+</div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+/* Basic Reset */
+
+/* Import pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Typing message style */
+.typing {
+    font-family: 'Press Start 2P', cursive;  /* pixel-style font */
+    font-size: 24px;                          /* bigger size */
+    color: #ff4081;                           /* romantic pink color */
+    max-width: 600px;
+    margin: 20px auto;
+    white-space: pre-wrap;                    /* preserve line breaks */
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Centered content */
+.centered {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Hidden by default */
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff1e64;
+}
+
+/* Romantic image */
+.romantic-photo {
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 100, 0.5);
+    width: 300px;
+    max-width: 80%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Typing effect */
+.typing {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    white-space: pre-wrap;
+}
+
+/* Signature */
+.signature {
+    font-size: 14px;
+    color: #ff8fcf;
+    margin-top: 50px;
+}
+
+/* Hearts / bubbles container */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Countdown numbers styling */
+#countdown span {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 5px;
+    color: #ff4081;
+}
+
+/* Rose Background */
+#rose-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2; /* behind hearts & envelope */
+    overflow: hidden;
+}
+
+/* Base rose style */
+.rose {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 50% 50%, #ff5f87 0%, #ffccd5 60%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+    animation: bloom 5s forwards, rotateRose 20s linear infinite;
+}
+
+/* Left rose */
+.rose-left {
+    top: 20%;
+    left: 20%;
+}
+
+/* Right rose */
+.rose-right {
+    top: 20%;
+    right: 20%;
+}
+
+/* Bloom animation */
+/* @keyframes bloom {
+    0% { opacity: 0; transform: scale(0) rotate(0deg); }
+    50% { opacity: 1; transform: scale(0.6) rotate(45deg); }
+    100% { opacity: 1; transform: scale(1) rotate(360deg); }
+} */
+
+/* Slow continuous rotation */
+@keyframes rotateRose {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.reason-to-smile {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.smile-photo {
+    width: 250px;
+    max-width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.5);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.smile-text {
+    font-family: 'Press Start 2P', cursive;
+    color: #ff4081;
+    margin-top: 10px;
+    font-size: 16px;
+}
+    
+.intro-text {
+    font-family: "Script MT Bold", cursive;
+    font-size: 36px;
+    color: #ff4081;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signature {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.profile-pic {
+    width: 60px;        /* controls size */
+    height: 60px;
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 8px;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.6);
+
+    animation: wiggle 2s infinite ease-in-out;
+    animation: bounce 1.2s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+    0%   { transform: translateY(0px) rotate(0deg); }
+    25%  { transform: translateY(-3px) rotate(2deg); }
+    50%  { transform: translateY(0px) rotate(0deg); }
+    75%  { transform: translateY(-3px) rotate(-2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* @keyframes bounce {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(-12px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+} */
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    12.5%  { transform: translateY(-8px); }
+    37.5%  { transform: translateY(0); }
+    50%  { transform: translateY(-4px); }
+    62.5% { transform: translateY(0); }
+    75%   { transform: translateY(-2px); }
+    87.5%  { transform: translateY(0); }
+    100%  { transform: translateY(0); }
+
+}
+
+/* .flower-field {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+}
+.flower {
+    position: absolute;
+    bottom: 0;
+    width: 6px;
+    height: 0;
+    background: green;
+    animation: growStem 2s ease-out forwards;
+}
+.flower::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: -7px;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: bloom 1s ease-out forwards;
+    animation-delay: 2s;
+}
+.f1 { left: 10%; animation-delay: 0.2s; }
+.f2 { left: 30%; animation-delay: 0.6s; }
+.f3 { left: 50%; animation-delay: 1s; }
+.f4 { left: 70%; animation-delay: 1.4s; }
+.f5 { left: 90%; animation-delay: 1.8s; }
+
+@keyframes growStem {
+    from { height: 0; }
+    to { height: 60px; }
+}
+
+@keyframes bloom {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+} */
